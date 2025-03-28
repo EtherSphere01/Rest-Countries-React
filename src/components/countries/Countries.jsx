@@ -1,15 +1,18 @@
 import React, { use } from "react";
 import Country from "../Country/Country";
+import "./Countries.css";
 
 const Countries = ({ countriesPromies }) => {
   const countries = use(countriesPromies);
-//   console.log(countries);
+  //   console.log(countries);
   return (
     <div>
-      <h1>Travelling Countries : {countries.length}</h1>
-      {countries.map((country) => (
-        <Country key={country.cca3} country={country}></Country>
-      ))}
+      <h1>Traveling Countries : {countries.length}</h1>
+      <div className="countries">
+        {countries.map((country) => (
+          <Country key={country.cca3} country={country}></Country>
+        ))}
+      </div>
     </div>
   );
 };
