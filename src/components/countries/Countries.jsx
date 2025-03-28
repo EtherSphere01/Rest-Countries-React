@@ -33,12 +33,15 @@ const Countries = ({ countriesPromise }) => {
     <div>
       <h1>Traveling Countries : {countries.length}</h1>
       <h2>Total Country Visited : {visitedCount} </h2>
+
       <ol>
         {visitedCountries.map((name, index) => (
           <li key={index}>{name}</li>
         ))}
       </ol>
+
       <img src={flag} alt="" />
+
       <div className="countries">
         {countries.map((country) => (
           <Country
